@@ -12,11 +12,11 @@ lunch_command="havoc"
 device_codename="RMX2193"
 build_type="userdebug"
 
-gapps_command="WITH_GAPPS"
+# gapps_command="WITH_GAPPS"
 
 #(With Gapps yes|no)
 
-with_gapps="yes"
+# with_gapps="no"
 
 #(Make command  : yes|no|bacon)
 
@@ -24,20 +24,20 @@ use_brunch="yes"
 
 # ROM Path definition
 
-folder="/home/${user}/havoc"
+folder="/home/cArN4gEisDeD/havoc" 
 rom_name="Havoc-OS"*.zip
 OUT_PATH="$folder/out/target/product/${device_codename}"
 ROM=${OUT_PATH}/${rom_name}
 
 # If only building  apk 
 
-target_name="no"
+# target_name="no"
 
 # uncomment set to (yes|no(default)|installclean)
 
 # make_clean = "installclean"
 # make_clean = "no"
- make_clean = "yes"
+# make_clean = "yes"
 
 # Telegram Config
 
@@ -68,10 +68,10 @@ tg_send $priv
 
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-export CCACHE_DIR=/home/cArN4gEisDeD/.ccache
+export CCACHE_DIR=/home/cArN4gEisDeD/ccache
 if [ -d ${CCACHE_DIR} ]; then
         echo "ccache folder already exists."
-        else
+        else 
         sudo chmod -R 777 ${CCACHE_DIR}
         echo "modifying ccache dir permission."
 fi
@@ -105,11 +105,11 @@ rm -rf ${OUT_PATH}/*.zip
 
 # Build Time
 
-if [ "$target_name" = "no" ]; then
+if [ "$target_name" = "<no>" ]; then
 
     if [ "$use_brunch" = "yes" ]; then
         
-        brunch ${device_codename}
+       brunch ${device_codename}
     
     else
         
