@@ -68,7 +68,7 @@ tg_send $priv
 
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-export CCACHE_DIR=${folder}/.ccache
+export CCACHE_DIR=/home/cArN4gEisDeD/.ccache
 if [ -d ${CCACHE_DIR} ]; then
         echo "ccache folder already exists."
         else
